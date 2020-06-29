@@ -1,0 +1,121 @@
+﻿#navbarheader{
+   background:url(../images/background/wz-background.gif) no-repeat;
+    background-size:initial;
+    border-bottom:3px solid #0094ff;
+   
+}
+
+.signup-btn-position{
+   
+    margin-top:40px;
+}
+.regform{
+    padding:10px;
+     top:35px;
+        background:rgba(0, 0, 0, 0.46);
+      
+   
+}
+
+.navbar-brand {
+    color: #fed136;
+    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
+   .navbar-brand.active, .navbar-brand:active, .navbar-brand:focus, .navbar-brand:hover {
+      color: #fec503; }
+
+.light-bg{
+    background-image: url(../images/symphony.png);
+}
+body{
+  
+    background-image: url(../images/background/Website-Background-Tile.png);
+}
+#homebody{
+     background-image: url(../images/background/swirl_pattern.png);
+}
+
+.vision&mission{
+    /*padding-left:7em;*/
+    background:repeating-linear-gradient(#0094ff);
+
+}
+#heading{
+    /*font-size:xx-large;*/
+}
+#subheading{
+    font-size:xx-large;
+}
+#jumbotron1{
+    background-color: rgba(0, 0, 0, 0.63);
+}
+
+#jumbotron2{
+background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity:0.8;
+}
+
+#jumbotron3{
+   background-color: rgba(0, 0, 0, 0.63);
+}
+
+
+#heading1{
+    top:-50px;
+}
+
+#jumbotronPrinci{
+   background: #abbaab;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffffff, #abbaab); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity:0.8;
+
+}
+#ContactUs{
+ background:url(../images/background/map-image.jpg);
+
+}
+
+#NoticeBoard{
+   background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+opacity:0.8;
+
+}
+
+#userhome{
+    background-color:white;
+    background-image:none;
+}
+
+/**{
+    font-family:cursive;
+}*/
+
+#adminnavbarheader{
+    background:url(../images/background/wz-background.gif) no-repeat;
+    background-size:initial;
+   
+}
+
+@media(max-width:768px){
+    #site-logo{
+
+        width:40px;
+        height:40px;
+
+    }
+    .navbar-brand{
+        font-size:medium;
+    }
+   .navbar{
+       min-height:10px;
+   }
+}
+
+ .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+

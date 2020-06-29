@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMaster.master.cs" Inherits="AdminMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Welcome Admin!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Welcome to Government Polytechnic, Murtizapur!">
+    <meta name="author" content="Nitin Dixit, Raj Patil, Sachin Rokade, Nikhil Devkar">
+    <meta name="url" content="http://www.yourdomainname.com">
+
+    <meta name="copyright" content="GPMZR">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/MyStyle.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+     <link href="css/lineiconstyle.css" rel="stylesheet" />
+    <link href="css/material-icons.css" rel="stylesheet" />
+    <link href="css/typicons.min.css" rel="stylesheet" />
+    <link href="css/entypo.css" rel="stylesheet" />
+       <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/site-logo/site-logo.png">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="">
+    <style type="text/css">
+        body, html {
+            background-image: none;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+          <!--------------------------------------------------navbar header start-------------------------------------------------------->
+            <header class="navbar navbar-expand-xl navbar-dark flex-column flex-md-row" id="adminnavbarheader">
+
+                <a class="navbar-brand mr-0 mr-md-2 " href="AdminProfile.aspx" aria-label="BrandName">
+                    <img src="images/site-logo/site-logo.png" height="70" width="70" id="site-logo" />
+                    GPM Welfare Network</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <%--<ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+
+                            <a class="nav-link" href="/"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home<span class="sr-only">(current)</span></a>
+                        </li>
+                        
+
+                    </ul>--%>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#" class="nav-link">Welcome, Admin!</a></li>
+                        <li class="nav-item">
+                            <asp:LinkButton ID="btnSignout" runat="server" OnClick="btnSignout_Click" CssClass="nav-item nav-link"><i class="fa fa-sign-out fa-fw"></i>Logout</asp:LinkButton>
+
+                        </li>
+                    </ul>
+                </div>
+
+
+            </header>
+
+            <!--------------------------------------------------navbar header end-------------------------------------------------------->
+
+           
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+          <!----------------------------------------------------- FOOTER start---------------------------------------------------------->
+
+
+            <div class="container">
+                <hr class="container" />
+                <footer class="container">
+                    <p class="float-right"><a href="#">Back to top <i class="fa fa-hand-o-up " aria-hidden="true"></i></a></p>
+                    <p>&copy; <asp:Label ID="lblYear" runat="server" Text="Label"></asp:Label> GPMZR, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                </footer>
+            </div>
+            <!----------------------------------------------------- FOOTER end---------------------------------------------------------->
+    </div>
+    </form>
+      <!--------------------------------------------------Neccesary javascript reference------------------------------------------------------->
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

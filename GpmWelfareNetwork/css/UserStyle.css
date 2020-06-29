@@ -1,0 +1,39 @@
+﻿#navbarheader{
+   background:url(../images/background/wz-background.gif) no-repeat;
+    background-size:initial;
+    border-bottom:3px solid #0094ff;
+  
+
+}
+.navbar-brand {
+    color: #fed136;
+    font-family: 'Kaushan Script', 'Helvetica Neue', Helvetica, Arial, cursive; }
+   .navbar-brand.active, .navbar-brand:active, .navbar-brand:focus, .navbar-brand:hover {
+      color: #fec503; }
+ .dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+* {
+	margin:0px;
+	padding:0px;
+}
+
+#userProfileCenterMenu{
+   padding-top:-47px;
+   
+    border-bottom:3px solid #0094ff;
+  
+}
+
+#feedback {
+    background-image: url(../images/background/wz-background.gif);
+}
+
+#librarysection{
+    padding-top: 3rem; 
+    padding-bottom: 3rem;
+     background-image:url(../images/background/rendering-shapes-visualization-cubes-abstraction-figures-black-background.jpg); 
+    
+     background-size:auto;
+     margin-bottom: 3em;
+}

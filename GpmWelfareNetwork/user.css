@@ -1,0 +1,23 @@
+﻿body {
+}
+.eachuser
+{
+    border:medium;
+    border-color:black;
+    color:black;
+    margin-bottom:20px;
+    margin-left:px;
+ 
+      background:rgba(10, 21, 21, 3.68);
+}
+.namefont
+{
+
+    font-size:20px;
+    font-family:Algerian,Arial;
+}
+.uploadedimage
+{
+    margin:20px;
+    
+}

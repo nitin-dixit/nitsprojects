@@ -1,0 +1,414 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UserMaster.master.cs" Inherits="UserMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Welcome!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Welcome to Government Polytechnic, Murtizapur!">
+    <meta name="author" content="Nitin Dixit, Raj Patil, Sachin Rokade, Nikhil Devkar">
+    <meta name="url" content="http://www.yourdomainname.com">
+    <meta name="copyright" content="GPMZR">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/MyStyle.css" rel="stylesheet" />
+    <link href="css/offcanvas.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/lineiconstyle.css" rel="stylesheet" />
+    <link href="css/material-icons.css" rel="stylesheet" />
+    <link href="css/typicons.min.css" rel="stylesheet" />
+    <link href="css/entypo.css" rel="stylesheet" />
+    <link href="user.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+    <link href="css/UserStyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body, html {
+            background-image: none;
+        }
+
+        #sidebar {
+            overflow: hidden;
+            z-index: 3;
+            color: #13baba;
+        }
+
+            #sidebar .list-group {
+                min-width: 400px;
+                background-color: #333;
+                min-height: 100vh;
+            }
+
+            #sidebar i {
+                margin-right: 6px;
+            }
+
+            #sidebar .list-group-item {
+                border-radius: 0;
+                background-color: #333;
+                color: #ccc;
+                border-left: 0;
+                border-right: 0;
+                border-color: #2c2c2c;
+                white-space: nowrap;
+            }
+
+                /* highlight active menu */
+                #sidebar .list-group-item:not(.collapsed) {
+                    background-color: #222;
+                }
+
+            /* closed state */
+            #sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+                content: " \f0d7";
+                font-family: FontAwesome;
+                display: inline;
+                text-align: right;
+                padding-left: 5px;
+            }
+
+            /* open state */
+            #sidebar .list-group .list-group-item[aria-expanded="true"] {
+                background-color: #222;
+            }
+
+                #sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+                    content: " \f0da";
+                    font-family: FontAwesome;
+                    display: inli
+                        ne;
+                    text-align: right;
+                    padding-left: 5px;
+                }
+
+            /* level 1*/
+            #sidebar .list-group .collapse .list-group-item,
+            #sidebar .list-group .collapsing .list-group-item {
+                padding-left: 20px;
+            }
+
+            /* level 2*/
+            #sidebar .list-group .collapse > .collapse .list-group-item,
+            #sidebar .list-group .collapse > .collapsing .list-group-item {
+                padding-left: 30px;
+            }
+
+            /* level 3*/
+            #sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+                padding-left: 40px;
+            }
+
+        @media (max-width:768px) {
+            #sidebar {
+                min-width: 35px;
+                max-width: 40px;
+                overflow-y: auto;
+                overflow-x: visible;
+                transition: all 0.25s ease;
+                transform: translateX(-45px);
+                position: static;
+            }
+
+                #sidebar.show {
+                    transform: translateX(0);
+                }
+
+                #sidebar::-webkit-scrollbar {
+                    width: 0px;
+                }
+
+                #sidebar, #sidebar .list-group {
+                    min-width: 35px;
+                    overflow: visible;
+                }
+                    /* overlay sub levels on small screens */
+                    #sidebar .list-group .collapse.show, #sidebar .list-group .collapsing {
+                        position: relative;
+                        z-index: 1;
+                        width: 190px;
+                        top: 0;
+                    }
+
+                    #sidebar .list-group > .list-group-item {
+                        text-align: center;
+                        padding: .75rem .5rem;
+                    }
+                        /* hide caret icons of top level when collapsed */
+                        #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+                        #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+                            display: none;
+                        }
+        }
+
+        .collapse.show {
+            visibility: visible;
+        }
+
+        .collapsing {
+            visibility: visible;
+            height: 0;
+            -webkit-transition-property: height, visibility;
+            transition-property: height, visibility;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+        }
+
+            .collapsing.width {
+                -webkit-transition-property: width, visibility;
+                transition-property: width, visibility;
+                width: 0;
+                height: 100%;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+    </style>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="images/site-logo/site-logo.png">
+    <link rel="apple-touch-icon" sizes="144x144" type="image/x-icon" href="">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="css/UserStyle.css" rel="stylesheet" />
+
+    </asp:ContentPlaceHolder>
+</head>
+<body id="userhome">
+    <form id="form1" runat="server">
+        <div>
+            <div>
+                <!--------------------------------------------------navbar header start-------------------------------------------------------->
+                <header class="navbar navbar-expand-md navbar-dark fixed-top bg-dark " id="navbarheader">
+
+                    <a class="navbar-brand mr-0 mr-md-2 " href="UserProfile.aspx" aria-label="GPMZR">
+                        <img src="images/site-logo/site-logo.png" height="70" width="70" id="site-logo" />
+                        GPM Welfare Network</a>
+                    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" data-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon active"></span>
+                    </button>
+
+                    <div class="navbar-collapse offcanvas-collapse" id="mynavbar">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="ProfilePage.aspx"><i class="fa fa-home fa-fw" aria-hidden="true"></i>Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Feedback.aspx">Feedback</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link nav-item dropdown-toggle mr-md-2 " href="#" id="BuyAndSelldropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy/Sell Books</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="BuyAndSelldropdown">
+                                     <a class="dropdown-item" href="MySellingRequest.aspx">My selling request</a>
+                                    <a class="dropdown-item" href="BuyBook.aspx">Buy BOOK</a>
+                                    <a class="dropdown-item" href="SellBook.aspx">SELL BOOK</a>
+                                    <a class="dropdown-item" href="BookRequest.aspx">REQUEST
+            &nbsp;&nbsp;&nbsp;<asp:Label runat="server" Font-Bold="true" ForeColor="Red" ID="request" Text="">
+            </asp:Label>
+                                    </a>
+                                </div>
+                            </li>
+
+                               <li class="nav-item dropdown">
+                                <a class="nav-link nav-item dropdown-toggle mr-md-2 " href="#" id="LostItem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lost-&-Found/Help</a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="LostItem">
+                                     <a class="dropdown-item" href="Lost.aspx">Lost and Found Reg. </a>
+                                           <a class="dropdown-item" href="Found.aspx">Lost Items</a>
+                                      <a class="dropdown-item" href="MyLostedItem.aspx">My Lost Items</a>
+                             
+                                    <a class="dropdown-item" href="HelperPage.aspx">Founded Items</a>
+                             
+                                <a class="dropdown-item" href="SendHelp.aspx">Helper's Request</a>
+                                </div>
+                                     </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Questions.aspx">Query Forum</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="Library.aspx">Library</a>
+                            </li>
+                         
+                              
+                             <li class="nav-item">
+                                <a class="nav-link" href="SearchPeople.aspx">Search Friends</a>
+                            </li>
+                        </ul>
+
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown active">
+                                <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="UserDropDown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <asp:Image ID="navbarUserImage" runat="server" class="rounded-circle" Width="40" Height="40" />
+                                    <asp:Label ID="lblUserDropdownName" runat="server"></asp:Label>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="UserDropDown">
+                                    <ul>
+                                        <a class="nav-item nav-link dropdown-item text-dark" href="ProfilePage.aspx"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                                        <%-- <a class="nav-item nav-link dropdown-item text-dark" href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>--%>
+                                        <li class="dropdown-divider"></li>
+                                        <asp:LinkButton ID="btnSignout" runat="server" OnClick="btnSignout_Click" CssClass="nav-item nav-link dropdown-item text-dark"><i class="fa fa-sign-out fa-fw"></i>Logout</asp:LinkButton>
+
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+
+
+                </header>
+
+                <!--------------------------------------------------navbar header end-------------------------------------------------------->
+            </div>
+            <!--user page start--------------------------------------------------------------------------------------------------------->
+
+
+            <%--  <ul id="userProfileCenterMenu" class="nav nav-tabs justify-content-center flex-column flex-sm-row navbar-dark  text-light " style="background: #000000;">
+                <li class="nav-item active">
+                    <a class="nav-link text-light bg-dark" href="#">Active</a>
+                </li>
+                <li class="nav-item dropdown active">
+                    <a class="nav-link dropdown-toggle text-light bg-dark" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item text-light bg-dark" href="#">Action</a>
+                        <a class="dropdown-item text-light bg-dark" href="#">Another action</a>
+                        <a class="dropdown-item text-light bg-dark" href="#">Something else here</a>
+                        <div class="dropdown-divider bg-dark"></div>
+                        <a class="dropdown-item text-light bg-dark" href="#">Separated link</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light bg-dark" href="#">Link</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-light bg-dark" href="#">Disabled</a>
+                </li>
+            </ul>--%>
+            <div class="container-fluid">
+                <div class="row  d-flex d-md-block flex-nowrap wrapper">
+                    <div class="col-md-2 float-left col-1 pl-0 pr-0 collapse width show" id="sidebar">
+                        <div class="list-group border-0 card text-center text-md-left">
+                            <a href="ProfilePage.aspx" class="list-group-item d-inline-block collapsed" title="User Profile" data-parent="#sidebar"><i class="fa fa-id-badge" ></i><span class="d-none d-md-inline">Profile</span></a>
+                                                   <a href="SearchPeople.aspx" class="list-group-item d-inline-block collapsed" title="search" data-parent="#sidebar"><i class="fa fa-search" title="search"></i><span class="d-none d-md-inline">Search Friends</span></a>
+                                 <a href="Feedback.aspx" class="list-group-item d-inline-block collapsed" title="Feedback" data-parent="#sidebar"><i class="fa fa-pencil" title="Feedback"></i><span class="d-none d-md-inline">Feedback</span></a>
+                            <a href="#BuySell" class="list-group-item d-inline-block collapsed" title="Buy/Sell Book" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-rupee"></i><span class="d-none d-md-inline">Buy/Sell Books</span> </a>
+                            
+                            <div class="collapse" id="BuySell">
+                                <a href="BuyBook.aspx" class="list-group-item" data-parent="#BuySell">Buy Book</a>
+                                <a href="SellBook.aspx" class="list-group-item" data-parent="#BuySell">Sell Book</a>
+                                <a href="BookRequest.aspx" class="list-group-item" data-parent="#BuySell">Request</a>
+                            </div>
+                            <a href="Questions.aspx" class="list-group-item d-inline-block collapsed" title="Question/Answer" data-parent="#sidebar"><i class="fa fa-question"></i><span class="d-none d-md-inline">Query Forum</span></a>
+                            <a href="Library.aspx" class="list-group-item d-inline-block collapsed " title="Library" data-parent="#sidebar"><i class="fa fa-book"></i><span class="d-none d-md-inline">Library</span></a>
+                            <a href="#LostFound" class="list-group-item d-inline-block collapsed " title="Lost-&-Found" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-map-marker"></i><span class="d-none d-md-inline">Lost-&-Found/Help</span> </a>
+
+                            <div class="collapse" id="LostFound">
+                                <a href="Lost.aspx" class="list-group-item" data-parent="#LostFound">Lost and Found Reg.</a>
+                                <a href="Found.aspx" class="list-group-item" data-parent="#LostFound">Lost Items</a>
+                                  <a href="MyLostedItem.aspx" class="list-group-item" data-parent="#LostFound">MyLost Items</a>
+                                <a href="HelperPage.aspx" class="list-group-item" data-parent="#LostFound">Founded Items</a>
+                                 <a href="SendHelp.aspx" class="list-group-item" data-parent="#LostFound">Helper's Request</a>
+                            </div>
+                            <a href="#Settings" class="list-group-item d-inline-block collapsed " title="Settings" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-wrench"></i><span class="d-none d-md-inline">Settings</span> </a>
+
+                            <div class="collapse" id="Settings">
+                                <a href="#Account" class="list-group-item" data-toggle="collapse" aria-expanded="false">Account</a>
+                                <div class="collapse" id="Account">
+                                    <a href="EditUserProfile.aspx" class="list-group-item" data-parent="#Account">Edit Profile</a>
+
+                                </div>
+                                <a href="#Privacy" class="list-group-item" data-toggle="collapse" aria-expanded="false">Privacy</a>
+                                <div class="collapse" id="Privacy">
+                                    <a href="ChangePassword.aspx" class="list-group-item" data-parent="#Privacy">Change Password</a>
+
+                                </div>
+                            </div>
+
+
+                            <%--   <a href="#menu1" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-dashboard"></i><span class="d-none d-md-inline">User Profile</span> </a>
+                        <div class="collapse" id="menu1">
+                            <a href="#menu1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 1 </a>
+                            <div class="collapse" id="menu1sub1">
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 1 a</a>
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 2 b</a>
+                                <a href="#menu1sub1sub1" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 3 c </a>
+                                <div class="collapse" id="menu1sub1sub1">
+                                    <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.1</a>
+                                    <a href="#" class="list-group-item" data-parent="#menu1sub1sub1">Subitem 3 c.2</a>
+                                </div>
+                                <a href="#" class="list-group-item" data-parent="#menu1sub1">Subitem 4 d</a>
+                                <a href="#menu1sub1sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">Subitem 5 e </a>
+                                <div class="collapse" id="menu1sub1sub2">
+                                    <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.1</a>
+                                    <a href="#" class="list-group-item" data-parent="#menu1sub1sub2">Subitem 5 e.2</a>
+                                </div>
+                            </div>
+                            <a href="#" class="list-group-item" data-parent="#menu1">Subitem 2</a>
+                            <a href="#" class="list-group-item" data-parent="#menu1">Subitem 3</a>
+                        </div>
+                        <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-film"></i><span class="d-none d-md-inline">Item 2</span></a>
+                        <a href="#menu3" class="list-group-item d-inline-block collapsed" data-toggle="collapse" data-parent="#sidebar" aria-expanded="false"><i class="fa fa-book"></i><span class="d-none d-md-inline">Item 3 </span></a>
+                        <div class="collapse" id="menu3">
+                            <a href="#" class="list-group-item" data-parent="#menu3">3.1</a>
+                            <a href="#menu3sub2" class="list-group-item" data-toggle="collapse" aria-expanded="false">3.2 </a>
+                            <div class="collapse" id="menu3sub2">
+                                <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 a</a>
+                                <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 b</a>
+                                <a href="#" class="list-group-item" data-parent="#menu3sub2">3.2 c</a>
+                            </div>
+                            <a href="#" class="list-group-item" data-parent="#menu3">3.3</a>
+                        </div>--%>
+                            <%--  <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-heart"></i><span class="d-none d-md-inline">Item 4</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-list"></i><span class="d-none d-md-inline">Item 5</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-clock-o"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-th"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-gear"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-calendar"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-envelope"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-bar-chart-o"></i><span class="d-none d-md-inline">Link</span></a>
+                            <a href="#" class="list-group-item d-inline-block collapsed" data-parent="#sidebar"><i class="fa fa-star"></i><span class="d-none d-md-inline">Link</span></a>
+                            --%>
+                        </div>
+                    </div>
+                    <div class="">
+                        <%-- <a href="#" data-target="#sidebar" data-toggle="collapse" style="text-decoration: none; background: none;" class="float-left col px-5 pl-md-2 pt-2 main"><i class="fa fa-navicon fa-2x py-2 p-1"></i></a>--%>
+
+                        <%--  <div class="clearfix"></div>--%>
+
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!--user page end--------------------------------------------------------------------------------------------------------->
+
+            <!----------------------------------------------------- FOOTER start---------------------------------------------------------->
+
+
+            <div class="container">
+                <hr class="container" />
+                <footer class="container">
+                    <p class="float-right"><a href="#">Back to top <i class="fa fa-hand-o-up " aria-hidden="true"></i></a></p>
+                    <p>&copy;
+                        <asp:Label ID="lblYear" runat="server" Text="Label"></asp:Label>
+                        GPMZR, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+                </footer>
+            </div>
+            <!----------------------------------------------------- FOOTER end---------------------------------------------------------->
+        </div>
+    </form>
+    <!--------------------------------------------------Neccesary javascript reference------------------------------------------------------->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/offcanvas.js"></script>
+     
+</body>
+</html>

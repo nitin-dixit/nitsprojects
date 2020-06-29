@@ -1,0 +1,281 @@
+﻿body {
+ 
+}
+
+.mainpanel
+{
+    margin:auto;
+    width:100%;
+    height:100%;
+    
+  border-bottom-left-radius:20px;
+  border-bottom-right-radius:20px;
+}
+.ansuserimgcss
+{
+    
+
+}
+.askdiv{
+    border-radius:20px;
+    background-color:black;
+    margin:auto;
+}
+.askaquestionlabel
+{
+    font-size:25px;
+    font-family:'Times New Roman', Times, serif;
+    color:white;
+       
+}
+.Userlabel{
+    margin-left:100px;
+    margin-bottom:100px;
+  
+    font-family:'Times New Roman', Times, serif; 
+    font-size:large;
+
+} 
+
+
+* { box-sizing:border-box; }
+
+/* basic stylings ------------------------------------------ */
+
+.container 		{ 
+  font-family:'Roboto';
+  width:600px; 
+  margin:30px auto 0; 
+  display:block; 
+  background:#FFF;
+  padding:10px 50px 50px;
+}
+h2 		 { 
+  text-align:center; 
+  margin-bottom:50px; 
+}
+h2 small { 
+  font-weight:normal; 
+  color:#888; 
+  display:block; 
+}
+.footer 	{ text-align:center; }
+.footer a  { color:#53B2C8; }
+
+/* form starting stylings ------------------------------- */
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:auto;
+  border:none;
+  border-bottom:1px solid #757575;
+  background-color:gray;
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:white; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+.quelistmargin
+{
+    margin:auto;
+}
+
+.questionslist{
+     display: inline-block;
+      margin:auto;
+    background-color:black;
+    box-shadow:0px 10px 10px 0px;
+   
+}
+.quelabel{
+    color:white;
+    font-size:20px;
+    font-family:'Times New Roman', Times, serif;
+    margin-left:60px;
+}
+ 
+
+.pmdiv
+{ 
+    
+}
+.plusmin {
+width:auto;
+color:white;
+height:30px;
+
+}
+.postedname {
+float:right;
+}
+
+.desclbl {
+color:gray;
+font:bold;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size:18px;
+}
+.imgname
+{
+    float:right;
+}
+
+
+.pos{
+     position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 99;
+    background-color:darkgrey;
+    
+    
+}
+.ansbtnpos {
+    position: fixed;
+    bottom: 6px;
+    
+    right: 0px;
+    width:70px;
+    height: 40px;
+    z-index: 99;
+    font:bold;
+    background:border-box;
+    color:white;
+    border-radius:20px;
+}
+input.textarea {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50px;
+    z-index: 99;
+    background: #fafafa;
+    border: none;
+    outline: none;
+    padding-left: 55px;
+    padding-right: 55px;
+    color: #666;
+    font-weight: 400;
+}
+
+.replycss{
+   
+    
+}
+.postedandusernamelbl
+{
+    font-size:13px;
+}
+.postedans
+{
+
+   height:100px;
+   border-radius:23px;
+}
+.postedanswer
+{
+    margin:auto;
+      
+    width:80%;
+margin-bottom:100px;
+}
+.border{
+    border-color:white;
+    border-radius:20px;
+    margin-right:110px;
+    height:auto;
+}
+.lbldescans
+{
+    color:white;
+}
+.votescss{
+    font-size:10px;
+}
